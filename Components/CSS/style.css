@@ -364,24 +364,23 @@ img {
 .label {
   background: var(--PRIMARY-BACKGROUND-CLR);
   border-radius: var(--BORDER-RADIUS);
-  font-size: 0.8rem;
   color: var(--SECONDARY-FONT-CLR);
-  padding: 0 2px;
+  padding: 0 5px;
   pointer-events: none;
   position: absolute;
-  left: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
+  left: var(--BTN-INPUT-PADDING-X);
+  top: var(--BTN-INPUT-PADDING-Y);
   transition: all var(--TRANSITION-DURATION);
 }
 
-.input.is-focused {
+.input-container.is-focused > .input {
   border-color: var(--PRIMARY-FONT-CLR);
 }
 
-.input.is-focused + .label {
+.input-container.is-focused > .label {
   color: var(--PRIMARY-FONT-CLR);
-  top: -55%;
+  transform: translateY(-100%);
+  bottom: var(--BTN-INPUT-PADDING-Y);
 }
 
 /* Component - Card */
