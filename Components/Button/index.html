@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/style.css" />
     <link rel="stylesheet" href="../../CSS/style.css" />
+    <script defer src="./JavaScript/script.js"></script>
     <title>SUKUNA UI</title>
   </head>
   <body>
@@ -66,7 +67,10 @@
           </a>
         </ul>
       </aside>
-      <section class="component-section --avatar">
+      <section
+        class="component-section --button"
+        id="component-section--button"
+      >
         <h2 class="component-section__heading sub-heading --h2">Buttons</h2>
         <p class="component-section__details">
           Button components are among the most used components on web. A
@@ -93,7 +97,20 @@
               />
             </svg>
           </button>
-          <button class="btn --floating-btn --hover-overlay"></button>
+          <button class="btn --floating-btn --hover-overlay scroll-to-top-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#fff"
+            >
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path
+                d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+              />
+            </svg>
+          </button>
         </div>
         <div class="code-preview-container">
           <p class="source-code-text">Source Code</p>
@@ -107,10 +124,9 @@
       <aside class="aside--section">
         <h3 class="aside__heading sub-heading --h3">On this page</h3>
         <ul>
-          <li class="navbar__items"></li>
-          <li class="navbar__items"></li>
-          <li class="navbar__items"></li>
-          <li class="navbar__items"></li>
+          <li class="navbar__items">
+            <a href="#component-section--button">Buttons</a>
+          </li>
         </ul>
       </aside>
     </main>
