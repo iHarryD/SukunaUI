@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+/* Global Edits */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root Variables */
+
+:root {
+  --ACCENT-CLR: #da0037;
+  --PRIMARY-BACKGROUND-CLR: #171717;
+  --PRIMARY-FONT-CLR: #fff;
+  --SECONDARY-BACKGROUND-CLR: #252525;
+
+  --PADDING-MAX: 1.2rem;
+  --PADDING-MIN: 0.6rem;
+}
+
+/* Generic Styling */
+
+body {
+  background: var(--PRIMARY-BACKGROUND-CLR);
+  color: var(--PRIMARY-FONT-CLR);
+  font-family: "Ubuntu", sans-serif;
+}
+
+ul,
+a,
+button,
+input {
+  background: inherit;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 2rem + 2vw, 4rem);
+}
+
+.sub-heading.--h2 {
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+}
+
+.main {
+  min-height: 100vh;
+}
+
+.main.--with-padding {
+  padding: clamp(var(--PADDING-MAX), 1rem + 4vw, 5rem);
+  padding-top: 30vh;
+}
+
+.--hover-overlay {
+  position: relative;
+}
+
+.--hover-overlay::after {
+  background: #00000026;
+  border-radius: inherit;
+  bottom: 0;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.--hover-overlay:hover::after {
+  position: absolute;
+}
+
+.btn > svg {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #36363685;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #363636;
+}
+
+/* Header */
+
+.header__navbar {
+  align-items: center;
+  background: var(--ACCENT-CLR);
+  display: flex;
+  gap: var(--PADDING-MIN);
+}
+
+.navbar__items {
+  padding: var(--PADDING-MIN) var(--PADDING-MAX);
+}
+
+.header__navbar .navbar__items {
+  cursor: pointer;
+  padding: var(--PADDING-MAX) clamp(0.5rem, 0.25rem + 2vw, var(--PADDING-MAX));
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+/* Aside Component Navbar */
+
+.aside--component {
+  background: var(--SECONDARY-BACKGROUND-CLR);
+  overflow: auto;
+  padding: var(--PADDING-MAX) 0;
+  width: 10rem;
+}
+
+.aside--component .active > .navbar__items {
+  border-left: 2px solid var(--ACCENT-CLR);
+}
+
+/* Aside Section Navbar */
+
+.aside--section {
+  padding: var(--PADDING-MAX);
+}
+
+.aside--section .navbar__items {
+  cursor: pointer;
+  margin: var(--PADDING-MIN) 0;
+  padding: 0;
+}
+
+.aside--section .navbar__items:hover {
+  text-decoration: underline;
+}
+
+.aside__heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+
+.footer {
+  padding: 1em;
+  background: var(--SECONDARY-BACKGROUND-CLR);
+  padding-bottom: 1px;
+}
+
+#social-media-tab li {
+  margin: 10px;
+}
+
+.social-media-links:hover {
+  text-decoration: underline;
+}
+
+#portfolio-link {
+  margin-top: 20px;
+  opacity: 0.6;
+  transition: all 250ms;
+}
+#portfolio-link:hover {
+  opacity: 1;
+}
+
+.footer {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Landing Page */
+
+.landing-page__heading {
+  margin-bottom: 1rem;
+}
+
+.landing-page__text {
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  max-width: 55ch;
+}
+
+.landing-page__button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.landing-page__button-container .btn {
+  margin: 0;
+}
+
+.main.--landing-page::after {
+  content: "";
+  background: url(../Assests/landing-page-background.svg) no-repeat;
+  background-position: 90% 60%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* Documentation Page */
+
+.main.--documentation {
+  display: flex;
+}
+
+/* Component Section */
+
+.component-section {
+  flex-grow: 1;
+  padding: 1.2rem;
+  width: min-content;
+}
+
+.component-section__heading {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid;
+}
+
+.component-section__details {
+  margin: 1rem 0;
+}
+
+/* Installation Page */
+
+.main.--installation {
+  text-align: center;
+}
+
+.iframe-source-code {
+  width: min(783px, 100%);
+  height: 206px;
+  border: 0;
+  transform: scale(1);
+  overflow: hidden;
+}
+
+.installation__heading {
+  margin: 1rem 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+  .aside--section {
+    display: none;
+  }
+}
