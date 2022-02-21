@@ -29,6 +29,7 @@
   --SECONDARY-BACKGROUND-CLR: #252525;
   --SECONDARY-BTN-HOVER-OVERLAY-CLR: #da003761;
   --SECONDARY-FONT-CLR: #878787;
+  --GLOWING-STAR-CLR: #f2df38;
 
   /* DIMENSIONS */
   --VERTICLE-CARD-WIDTH: 23rem;
@@ -36,7 +37,6 @@
   --PRODUCT-CARD-HEIGHT: 280px;
   --MODAL-WIDTH: 35ch;
   --HORIZONTAL-CARD-WIDTH: 700px;
-  --RATING-STAR-SIZE: 3rem;
 
   /* SPACING */
   --ALERT-PADDING: 1.2rem;
@@ -359,24 +359,23 @@ img {
 .label {
   background: var(--PRIMARY-BACKGROUND-CLR);
   border-radius: var(--BORDER-RADIUS);
-  font-size: 0.8rem;
   color: var(--SECONDARY-FONT-CLR);
-  padding: 0 2px;
+  padding: 0 5px;
   pointer-events: none;
   position: absolute;
-  left: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
+  left: var(--BTN-INPUT-PADDING-X);
+  top: var(--BTN-INPUT-PADDING-Y);
   transition: all var(--TRANSITION-DURATION);
 }
 
-.input.is-focused {
+.input-container.is-focused > .input {
   border-color: var(--PRIMARY-FONT-CLR);
 }
 
-.input.is-focused + .label {
+.input-container.is-focused > .label {
   color: var(--PRIMARY-FONT-CLR);
-  top: -55%;
+  transform: translateY(-100%);
+  bottom: var(--BTN-INPUT-PADDING-Y);
 }
 
 /* Component - Card */
@@ -683,7 +682,7 @@ img {
   background: var(--SECONDARY-BACKGROUND-CLR);
 }
 
-/* Component - Slider */
+/* Component - Rating */
 
 .rating-star-container {
   cursor: pointer;
@@ -694,5 +693,10 @@ img {
 }
 
 .rating-star {
-  font-size: var(--RATING-STAR-SIZE);
+  margin: 0 1rem;
+  transform: scale(2.5);
+}
+
+.rating-star.glowing {
+  fill: var(--GLOWING-STAR-CLR);
 }
