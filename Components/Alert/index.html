@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <title>SUKUNA UI</title>
+  </head>
+  <body>
+    <header class="header">
+      <ul class="header__navbar">
+        <a class="header__logo" href="../../index.html">
+          <li class="navbar__items">SUKUNA</li>
+        </a>
+        <a href="../../Pages/installation.html">
+          <li class="navbar__items header__installation">Installation</li>
+        </a>
+        <a href="../../Pages/documentation.html">
+          <li class="navbar__items header__documentation">Documentation</li>
+        </a>
+      </ul>
+    </header>
+    <main class="main --documentation">
+      <aside class="aside--component">
+        <ul>
+          <a href="./index.html">
+            <li class="navbar__items --hover-overlay">Alert</li>
+          </a>
+          <a href="../Avatar/index.html">
+            <li class="navbar__items --hover-overlay">Avatar</li>
+          </a>
+          <a href="../Badge/index.html">
+            <li class="navbar__items --hover-overlay">Badge</li>
+          </a>
+          <a href="../Button/index.html">
+            <li class="navbar__items --hover-overlay">Button</li>
+          </a>
+          <a href="../Card/index.html">
+            <li class="navbar__items --hover-overlay">Card</li>
+          </a>
+          <a href="../Image/index.html">
+            <li class="navbar__items --hover-overlay">Image</li>
+          </a>
+          <a href="../Input/index.html">
+            <li class="navbar__items --hover-overlay">Input</li>
+          </a>
+          <a href="../List/index.html">
+            <li class="navbar__items --hover-overlay">List</li>
+          </a>
+          <a href="../Modal/index.html">
+            <li class="navbar__items --hover-overlay">Modal</li>
+          </a>
+          <a href="../Navbar/index.html">
+            <li class="navbar__items --hover-overlay">Navbar</li>
+          </a>
+          <a href="../Rating/index.html">
+            <li class="navbar__items --hover-overlay">Rating</li>
+          </a>
+          <a href="../Text/index.html">
+            <li class="navbar__items --hover-overlay">Text</li>
+          </a>
+          <a href="../Toast/index.html">
+            <li class="navbar__items --hover-overlay">Toast</li>
+          </a>
+        </ul>
+      </aside>
+      <section
+        class="component-section --alert --verticle-flex --has-multiple-components"
+      >
+        <div class="alert-container" id="container--alert-basic">
+          <h2 class="component-section__heading sub-heading --h2">
+            Alert - Basic
+          </h2>
+          <p class="component-section__details">
+            Alert is a pop message that is meant to share important information
+            to the user from the server. This is a basic alert component.
+          </p>
+          <div class="preview-container">
+            <div class="alert --basic --horizontal-flex">
+              <p class="alert-text">This is a basic alert.</p>
+              <button class="btn alert-close-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#fff"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="code-preview-container">
+            <p class="source-code-text">Source Code</p>
+            <img
+              src="../Assests/source-code-alert-basic.png"
+              alt="source-code"
+              class="source-code-image"
+            />
+          </div>
+        </div>
+        <div class="alert-container" id="container--alert-warning">
+          <h2 class="component-section__heading sub-heading --h2">
+            Alert - Warning
+          </h2>
+          <p class="component-section__details">
+            Warning alerts are used to warn user of something.
+          </p>
+          <div class="preview-container">
+            <div class="alert --warning --horizontal-flex">
+              <p class="alert-text">This is a warning alert.</p>
+              <button class="btn alert-close-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#fff"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="code-preview-container">
+            <p class="source-code-text">Source Code</p>
+            <img
+              src="../Assests/source-code-alert-warning.png"
+              alt="source-code"
+              class="source-code-image"
+            />
+          </div>
+        </div>
+        <div class="alert-container" id="container--alert-success">
+          <h2 class="component-section__heading sub-heading --h2">
+            Alert - Success
+          </h2>
+          <p class="component-section__details">
+            Sucess alerts are used to inform the user pon success of a process.
+          </p>
+          <div class="preview-container">
+            <div class="alert --success --horizontal-flex">
+              <p class="alert-text">This is a sucess alert.</p>
+              <button class="btn alert-close-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#fff"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="code-preview-container">
+            <p class="source-code-text">Source Code</p>
+            <img
+              src="../Assests/source-code-alert-success.png"
+              alt="source-code"
+              class="source-code-image"
+            />
+          </div>
+        </div>
+        <div class="alert-container" id="container--alert-information">
+          <h2 class="component-section__heading sub-heading --h2">
+            Alert - Information
+          </h2>
+          <p class="component-section__details">
+            Alert is a pop message that is meant to share important information
+            to the user from the server.
+          </p>
+          <div class="preview-container">
+            <div class="alert --information --horizontal-flex">
+              <p class="alert-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button class="btn alert-close-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#fff"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="code-preview-container">
+            <p class="source-code-text">Source Code</p>
+            <img
+              src="../Assests/source-code-alert-information.png"
+              alt="source-code"
+              class="source-code-image"
+            />
+          </div>
+        </div>
+      </section>
+      <aside class="aside--section">
+        <h3 class="aside__heading sub-heading --h3">On this page</h3>
+        <ul>
+          <li class="navbar__items">
+            <a href="#container--alert-basic">Alert - Basic</a>
+          </li>
+          <li class="navbar__items">
+            <a href="#container--alert-warning">Alert - Warning</a>
+          </li>
+          <li class="navbar__items">
+            <a href="#container--alert-success">Alert - Success</a>
+          </li>
+          <li class="navbar__items">
+            <a href="#container--alert-information">Alert - Information</a>
+          </li>
+        </ul>
+      </aside>
+    </main>
+    <footer class="footer">
+      <ul id="social-media-tab">
+        <li>
+          <a class="social-media-links" href="https://github.com/iHarryD">
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a
+            class="social-media-links"
+            href="https://www.linkedin.com/in/prashant-kumar-a97251195/"
+          >
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+      <p id="portfolio-link">
+        Website created by
+        <a href="https://iharryd.github.io/portfolio/">Harry</a>
+      </p>
+    </footer>
+  </body>
+</html>

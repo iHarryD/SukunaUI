@@ -175,12 +175,7 @@ img {
 
 .btn.--floating-btn,
 .btn.--icon-btn {
-  animation-name: floating-btn;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in;
-  animation-delay: 0;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
+  animation: floating-btn 1.5s ease-in forwards infinite;
   aspect-ratio: 1;
   background: var(--ACCENT-CLR);
   border-radius: 50%;
@@ -687,7 +682,7 @@ img {
   background: var(--SECONDARY-BACKGROUND-CLR);
 }
 
-/* Component - Slider */
+/* Component - Rating */
 
 .rating-star-container {
   cursor: pointer;
