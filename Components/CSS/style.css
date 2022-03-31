@@ -32,6 +32,7 @@
   --GLOWING-STAR-CLR: #f2df38;
 
   /* DIMENSIONS */
+  --BADGE-CARD-WIDTH: 20rem;
   --VERTICLE-CARD-WIDTH: 23rem;
   --PRODUCT-CARD-WIDTH: 250px;
   --PRODUCT-CARD-HEIGHT: 280px;
@@ -360,22 +361,31 @@ img {
   background: var(--PRIMARY-BACKGROUND-CLR);
   border-radius: var(--BORDER-RADIUS);
   color: var(--SECONDARY-FONT-CLR);
+  font-size: 0.9rem;
   padding: 0 5px;
   pointer-events: none;
   position: absolute;
-  left: var(--BTN-INPUT-PADDING-X);
+  left: calc(var(--BTN-INPUT-PADDING-X) - 5px);
   top: var(--BTN-INPUT-PADDING-Y);
   transition: all var(--TRANSITION-DURATION);
 }
 
-.input-container.is-focused > .input {
+.input.is-focused ~ .label {
   border-color: var(--PRIMARY-FONT-CLR);
 }
 
-.input-container.is-focused > .label {
+.input.is-focused ~ .label {
   color: var(--PRIMARY-FONT-CLR);
   transform: translateY(-100%);
   bottom: var(--BTN-INPUT-PADDING-Y);
+}
+
+.input.invalid-input {
+  border-color: red;
+}
+
+.input.valid-input {
+  border-color: green;
 }
 
 /* Component - Card */
@@ -536,6 +546,75 @@ img {
   width: 100%;
   height: 100%;
   padding: 1rem;
+}
+
+.card.--badge-card {
+  overflow: unset;
+  width: var(--BADGE-CARD-WIDTH);
+}
+
+.card.--badge-card .card-thumbnail-container img {
+  max-height: 12rem;
+}
+
+.badge-card__synopsis {
+  line-height: 1.2;
+  margin: 0.5em 0;
+  text-align: justify;
+}
+
+.has-badge {
+  position: relative;
+}
+
+.card__badge {
+  align-items: center;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 50%;
+  z-index: 1;
+}
+
+.card__badge__text {
+  background: var(--ACCENT-CLR);
+  padding: 0.5rem;
+  position: absolute;
+  width: 150%;
+  text-align: center;
+  transform: rotateZ(45deg) translateY(-100%);
+}
+
+.card.--shadow-card {
+  padding: var(--CARD-PADDING);
+  box-shadow: 5px 5px 10px #00000082;
+}
+
+.card.--shadow-card .card-button-container .btn {
+  margin-top: 0.5em;
+  width: 100%;
+}
+
+.card.--text-overlay {
+  position: relative;
+}
+
+.overlay-text {
+  background: #000000ba;
+  display: grid;
+  font-size: 2rem;
+  font-weight: 600;
+  position: absolute;
+  place-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 /* Component - Text */
