@@ -40,7 +40,7 @@
           <a href="../Card/index.html">
             <li class="navbar__items --hover-overlay">Card</li>
           </a>
-          <a href="../Grid/index.html">
+          <a href="./index.html">
             <li class="navbar__items --hover-overlay">Grid</li>
           </a>
           <a href="../Image/index.html">
@@ -61,7 +61,7 @@
           <a href="../Rating/index.html">
             <li class="navbar__items --hover-overlay">Rating</li>
           </a>
-          <a href="./index.html">
+          <a href="../Text/index.html">
             <li class="navbar__items --hover-overlay">Text</li>
           </a>
           <a href="../Toast/index.html">
@@ -69,29 +69,54 @@
           </a>
         </ul>
       </aside>
-      <section
-        class="component-section --text-utilities"
-        id="component-section--text"
-      >
-        <h2 class="component-section__heading sub-heading --h2">Text</h2>
+      <section class="component-section --grid" id="component-section--grid">
+        <h2 class="component-section__heading sub-heading --h2">Grid</h2>
         <p class="component-section__details">
-          Text components are styled as per their role in the website. These
-          components are also fluid responsive.
+          Grids are one of the most used techiniques in CSS to create and
+          structure layouts.
         </p>
-        <div class="preview-container">
-          <h1 class="heading">This is heading - H1</h1>
-          <h2 class="sub-heading --h2">This is sub-heading - H2</h2>
-          <h3 class="sub-heading --h3">This is sub-heading - H3</h3>
-          <p class="small-text">This is small text</p>
-          <p class="gray-text">This is gray text</p>
-          <p class="center-text">This is center text</p>
+        <div class="preview-container --verticle-flex">
+          <div class="grid --2-columns">
+            <div>
+              <img
+                src="https://source.unsplash.com/random/600x600/?marvel"
+                alt="sample-img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://source.unsplash.com/random/600x600/?dccomics"
+                alt="sample-img"
+              />
+            </div>
+          </div>
+          <div class="grid --3-columns">
+            <div>
+              <img
+                src="https://source.unsplash.com/random/600x600/?ironman"
+                alt="sample-img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://source.unsplash.com/random/600x600/?batman"
+                alt="sample-img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://source.unsplash.com/random/600x600/?thor"
+                alt="sample-img"
+              />
+            </div>
+          </div>
         </div>
         <div class="code-preview-container">
           <p class="source-code-text">Source Code</p>
           <img
-            src="../Assests/source-code-text.png"
+            src="../Assests/source-code-grid.png"
             alt="source-code"
-            class="source-code-image"
+            class="source-code-input"
           />
         </div>
       </section>
@@ -99,7 +124,7 @@
         <h3 class="aside__heading sub-heading --h3">On this page</h3>
         <ul>
           <li class="navbar__items">
-            <a href="#component-section--text">Text</a>
+            <a href="#component-section--grid">Grid</a>
           </li>
         </ul>
       </aside>

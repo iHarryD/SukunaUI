@@ -700,3 +700,18 @@ img {
 .rating-star.glowing {
   fill: var(--GLOWING-STAR-CLR);
 }
+
+/* Component - Grids */
+
+.grid {
+  display: grid;
+  gap: 1em;
+}
+
+.grid.--2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid.--3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
